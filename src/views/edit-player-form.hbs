@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Player</title>
+	<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+	<h1>Edit Player</h1>
+	
+	<form action="/players/{{player.id}}/edit-submit" method="post">
+		<p>
+			<label for="name">Player Name</label>
+			<input name="name" value="{{player.name}}" id="name" required />
+		</p>
+		<p>
+			<label for="jersey">Jersey Number</label>
+			<input name="jersey" value="{{player.jersey}}" id="jersey" type="number" step="1" min="0" />
+		</p>
+		<p>
+			<button type="submit">Save</button> />
+			<a href="/players">Never Mind</a>
+		</p>
+	</form>
+
+{{!-- method? Post same as handle for submit
+action - URL for submission? /players/:id/edit-submit
+inputs/names?  name , jersey
+model? 
+--}}
+{{!-- <form action="/players/{{player.id}}/edit-submit" method="post">
+<p>
+	<label for="name">Player Name </label>
+	<input type="text" id="name" name="name">
+</p>
+<p>
+	<label for="Jersey">Jersey Number </label>
+	<input type="number" id="jersey" name="jersey">
+</p>
+<p>
+	<button types="submit">Save</button>
+	<a href="/players">Never Mind</a>
+</p>
+</form> --}}
+</body>
+</html>

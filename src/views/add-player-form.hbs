@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Player</title>
+	<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+	<h1>Add a Player</h1>
+	
+	<form action="/players/add-submit" method="post">
+		<p>
+			<label for="name">Player Name</label>
+			<input name="name" id="name" required />
+		</p>
+		<p>
+			<label for="jersey">Jersey Number</label>
+			<input name="jersey" id="jersey" type="number" step="1" min="0" />
+		</p>
+		<p>
+			<input type="submit" value="Add" />
+			<a href="/players">Never Mind</a>
+		</p>
+	</form>
+</body>
+</html>
